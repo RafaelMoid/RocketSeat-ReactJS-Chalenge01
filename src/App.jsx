@@ -20,16 +20,11 @@ function App() {
     },
   ]);
 
-  // Função para adicionar um novo todo
   const addTodo = (newTodo) => {
-    // Usamos o spread operator para criar um novo array de todos,
-    // adicionando o novo todo no final.
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  // Função para alternar o valor de completed de um todo
   const toggleCompleted = (id) => {
-    // Criamos um novo array de todos, alterando o `completed` do todo específico.
     setTodos(prevTodos =>
       prevTodos.map(todo =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
@@ -37,9 +32,7 @@ function App() {
     );
   };
 
-  // Função para remover um todo do array
   const removeTodo = (id) => {
-    // Filtramos o array de todos para criar um novo array sem o todo removido.
     setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
   };
 

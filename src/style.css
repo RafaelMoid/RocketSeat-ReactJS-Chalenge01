@@ -1,0 +1,219 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(#5E60CE);
+}
+
+body {
+  background-color: #1A1A1A;
+  color: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0D0D0D;
+  padding: 4.5rem 0 5rem 0;
+}
+header picture {
+  margin: 0 auto;
+}
+header picture img {
+  width: fit-content;
+}
+
+.todoAddBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 44rem;
+  width: 48.8%;
+  margin: -1.688rem auto 0 auto;
+  height: 54px;
+}
+.todoAddBar textarea {
+  height: 100%;
+  width: 100%;
+  background-color: #262626;
+  padding: 16px 1rem;
+  border-radius: 8px;
+  resize: none;
+  overflow: hidden;
+}
+.todoAddBar textarea::placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #808080;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 1; /* Firefox */
+}
+.todoAddBar textarea:focus {
+  color: #F2F2F2;
+  outline: transparent;
+  border-color: #5E60CE;
+}
+.todoAddBar button[type=submit] {
+  padding: 1rem;
+  margin-left: 0.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #F2F2F2;
+  background-color: #1E6F9F;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+.todoAddBar button[type=submit] svg {
+  margin-left: 8px;
+}
+.todoAddBar button[type=submit]:hover {
+  background-color: #4EA8DE;
+}
+
+.TODOBox {
+  max-width: 44rem;
+  width: 48.8%;
+  margin: 4rem auto 0 auto;
+}
+.TODOBox .counters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.TODOBox .counters .criadas,
+.TODOBox .counters .concluidas {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.TODOBox .counters .criadas {
+  color: #4EA8DE;
+}
+.TODOBox .counters .criadas strong {
+  font-size: 0.75rem;
+  color: #F2F2F2;
+  font-weight: 700;
+  background-color: #262626;
+  border-radius: 999px;
+  margin-left: 8px;
+  padding: 4px 12px;
+}
+.TODOBox .counters .concluidas {
+  color: #8284FA;
+}
+.TODOBox .counters .concluidas strong {
+  font-size: 0.75rem;
+  color: #F2F2F2;
+  font-weight: 700;
+  background-color: #262626;
+  border-radius: 999px;
+  margin-left: 8px;
+  padding: 2px 8px;
+  word-spacing: 2px;
+}
+.TODOBox .todoCards {
+  margin-top: 1.5rem;
+}
+.TODOBox .todoCards .noCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #333333;
+}
+.TODOBox .todoCards .noCards img {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.TODOBox .todoCards .noCards span,
+.TODOBox .todoCards .noCards p {
+  color: #808080;
+}
+.TODOBox .todoCards .noCards span {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.TODOBox .todoCards .noCards p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.TODOBox .todoCards .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262626;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+.TODOBox .todoCards .card h3 {
+  width: 100%;
+  text-align: left;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #F2F2F2;
+}
+.TODOBox .todoCards .card h3.completed {
+  text-decoration: line-through;
+  color: #808080;
+}
+.TODOBox .todoCards .card button {
+  background-color: transparent;
+  padding: 4px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  transition: color 0.3s ease;
+}
+.TODOBox .todoCards .card button:hover svg {
+  color: #E25858 !important;
+}
+.TODOBox .todoCards .card .toggle-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #4EA8DE;
+  background-color: #262626;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.TODOBox .todoCards .card .toggle-button.completed {
+  border: #8284FA;
+  background-color: #8284FA; /* Cor do círculo preenchido */
+  color: #F2F2F2;
+}
+
+/*# sourceMappingURL=style.css.map */

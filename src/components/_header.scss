@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray-700;
+    padding: 4.5rem 0 5rem 0;
+
+    picture {
+        margin: 0 auto;
+
+        img {
+            width: fit-content;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+.TODOBox {
+  max-width: 44rem;
+  width: 48.8%;
+  margin: 4rem auto 0 auto;
+
+  .counters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .criadas,
+    .concluidas {
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+    }
+
+    .criadas {
+      color: $blue;
+      & strong {
+        font-size: $font-size-small;
+        color: $gray-100;
+        font-weight: $font-weight-bold;
+        background-color: $gray-500;
+        border-radius: 999px;
+        margin-left: 8px;
+        padding: 4px 12px;
+      }
+    }
+
+    .concluidas {
+      color: $purple;
+      & strong {
+        font-size: $font-size-small;
+        color: $gray-100;
+        font-weight: $font-weight-bold;
+        background-color: $gray-500;
+        border-radius: 999px;
+        margin-left: 8px;
+        padding: 2px 8px;
+        word-spacing: 2px;
+      }
+    }
+  }
+
+  .todoCards {
+    margin-top: 1.5rem;
+
+    .noCards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid $gray-400;
+
+      img {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      span,
+      p {
+        color: $gray-300;
+      }
+
+      span {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-big;
+      }
+
+      p {
+        font-weight: $font-weight-light;
+        font-size: $font-size-big;
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $gray-500;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+
+      h3 {
+        width: 100%;
+        text-align: left;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-light;
+        color: $gray-100;        
+        
+        &.completed {
+            text-decoration: line-through;
+            color: $gray-300;
+          }
+      }
+
+      button {
+        background-color: transparent;
+        padding: 4px;
+        outline: none;
+        border: none;
+        box-sizing: border-box;
+        transition: color 0.3s ease;
+        &:hover {
+          svg {
+            color: $danger-red !important;
+          }
+        }
+      }
+
+      .toggle-button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid $blue;
+        background-color: $gray-500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+
+        &.completed {
+          border: $purple;
+          background-color: $purple; /* Cor do círculo preenchido */
+          color: $gray-100;
+        }
+      }
+    }
+  }
+}
